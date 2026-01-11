@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Virtual Assistant | [Your Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 600; font-size: 1.2rem; color: var(--primary); }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--gray); max-width: 600px; margin: 0 auto 2rem; }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 5%; }
+
+        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        .about { background: white; border-radius: 12px; padding: 40px; margin-top: 40px; }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Mary Elena Cang</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Efficiency Delivered.</h1>
+        <p>Expert Virtual Assistance for entrepreneurs and small businesses. I take care of the details so you can lead.</p>
+        <a href="mailto:your@email.com" class="btn">Work With Me</a>
+    </section>
+
+    <div class="container" id="services">
+        <h2>What I Do</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Admin Support</h3>
+                <p>Email management, calendar scheduling, data entry, and file organization.</p>
+            </div>
+            <div class="card">
+                <h3>Customer Care</h3>
+                <p>Responding to tickets, managing live chats, and processing orders efficiently.</p>
+            </div>
+            <div class="card">
+                <h3>Marketing</h3>
+                <p>Social media scheduling, Canva design, and basic newsletter management.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="about">
+        <div class="about">
+            <h2>About Me</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Hi, I'm [Your Name]! I help busy professionals reclaim 10+ hours a week by streamlining their backend processes. With a background in [Your Background], I focus on reliability and proactive communication.
+            </p>
+            <div class="tech-stack">
+                <span class="tag">Google Workspace</span>
+                <span class="tag">Slack</span>
+                <span class="tag">Asana/Trello</span>
+                <span class="tag">Canva</span>
+                <span class="tag">Mailchimp</span>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>Ready to get started?</p>
+        <p><strong>your.email@example.com</strong></p>
+        <br>
+        <p>&copy; 2026 [Your Name]. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
