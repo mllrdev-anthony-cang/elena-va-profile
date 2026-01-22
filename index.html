@@ -271,7 +271,7 @@
        <div class="absolute top-6 right-6 text-5xl text-amber-200">
         "
        </div>
-       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">����</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
        </div>
        <p class="text-stone-600 mb-6 relative z-10">"Sarah transformed my chaotic inbox into an organized system. I now have 10+ extra hours per week to focus on growing my business!"</p>
        <div class="flex items-center gap-3">
@@ -516,6 +516,25 @@
       });
     }
 
+    // Initialize Data SDK for contact form submissions
+    const dataHandler = {
+      onDataChanged(data) {
+        // This is a write-only form, no need to display submissions in the UI
+        console.log('Form submissions stored:', data.length);
+      }
+    };
+
+    // Initialize Data SDK
+    if (window.dataSdk) {
+      window.dataSdk.init(dataHandler).then(result => {
+        if (result.isOk) {
+          console.log('Contact form ready to save submissions');
+        } else {
+          console.error('Failed to initialize data storage');
+        }
+      });
+    }
+
     // Mobile menu toggle
     document.getElementById('mobile-menu-btn').addEventListener('click', function() {
       const menu = document.getElementById('mobile-menu');
@@ -541,32 +560,48 @@
     });
 
     // Form submission handling
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       
       const form = this;
       const button = form.querySelector('button[type="submit"]');
       const successMsg = document.getElementById('form-success');
       
-      // Show loading state
-      button.disabled = true;
-      button.innerHTML = '<span>Sending...</span>';
+      // Get form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
       
-      // Simulate form submission
+      // Create email content
+      const subject = encodeURIComponent(`New Contact Form Submission from ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\n\n` +
+        `Email: ${email}\n\n` +
+        `Service Interested In: ${service || 'Not specified'}\n\n` +
+        `Message:\n${message}\n\n` +
+        `---\n` +
+        `This message was sent via your portfolio contact form.`
+      );
+      
+      // Create mailto link - UPDATE THIS EMAIL ADDRESS
+      const mailtoLink = `mailto:iamanthonycang@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open email client
+      window.open(mailtoLink, '_blank');
+      
+      // Show success message
+      form.reset();
+      successMsg.textContent = '✓ Your email client will open with the message. Please send it to complete your inquiry!';
+      successMsg.classList.remove('hidden');
+      
       setTimeout(() => {
-        form.reset();
-        successMsg.classList.remove('hidden');
-        button.disabled = false;
-        button.innerHTML = '<span>Send Message</span><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
-        
-        setTimeout(() => {
-          successMsg.classList.add('hidden');
-        }, 5000);
-      }, 1500);
+        successMsg.classList.add('hidden');
+      }, 8000);
     });
 
     // Initial render
     onConfigChange(config);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1cd3ad638c1fc4',t:'MTc2OTA2MTU4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1d1117e40b064f',t:'MTc2OTA2NDA5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
