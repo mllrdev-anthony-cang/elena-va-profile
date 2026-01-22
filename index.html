@@ -1,179 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Virtual Assistant | [Your Name]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-
-        header {
-            background: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
-        }
-
-        .logo { font-weight: 600; font-size: 1.2rem; color: var(--primary); }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark);
-            margin-left: 20px;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover { color: var(--primary); }
-
-        .hero {
-            padding: 100px 5%;
-            text-align: center;
-            background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
-        }
-
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; color: var(--gray); max-width: 600px; margin: 0 auto 2rem; }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 5%; }
-
-        h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s;
-        }
-
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; }
-
-        .about { background: white; border-radius: 12px; padding: 40px; margin-top: 40px; }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .tag {
-            background: #e2e8f0;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            nav { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Mary Elena Cang</div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Efficiency Delivered.</h1>
-        <p>Expert Virtual Assistance for entrepreneurs and small businesses. I take care of the details so you can lead.</p>
-        <a href="mailto:your@email.com" class="btn">Work With Me</a>
-    </section>
-
-    <div class="container" id="services">
-        <h2>What I Do</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>Admin Support</h3>
-                <p>Email management, calendar scheduling, data entry, and file organization.</p>
-            </div>
-            <div class="card">
-                <h3>Customer Care</h3>
-                <p>Responding to tickets, managing live chats, and processing orders efficiently.</p>
-            </div>
-            <div class="card">
-                <h3>Marketing</h3>
-                <p>Social media scheduling, Canva design, and basic newsletter management.</p>
-            </div>
-        </div>
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Assistant Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-body {
+      font-family: 'DM Sans', sans-serif;
+    }
+    .gradient-blob {
+      background: radial-gradient(ellipse at 30% 20%, rgba(255, 200, 170, 0.4) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(200, 180, 255, 0.3) 0%, transparent 50%);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: currentColor;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .animate-delay-4 { animation-delay: 0.4s; opacity: 0; }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body">
+  <div id="app" class="w-full h-full overflow-auto bg-stone-50"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#home" id="nav-name" class="font-display text-xl font-semibold text-stone-800">Mary Elena Cang</a>
+     <div class="hidden md:flex items-center gap-8"><a href="#about" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">About</a> <a href="#services" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Services</a> <a href="#testimonials" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-stone-800 text-white rounded-full text-sm font-medium hover:bg-stone-700 transition-colors">Get in Touch</a>
+     </div><button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg></button>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200/50 px-6 py-4">
+     <div class="flex flex-col gap-4"><a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">About</a> <a href="#services" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Services</a> <a href="#testimonials" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-stone-800 text-white rounded-full text-sm font-medium hover:bg-stone-700 transition-colors text-center">Get in Touch</a>
+     </div>
     </div>
-
-    <div class="container" id="about">
-        <div class="about">
-            <h2>About Me</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-                Hi, I'm [Your Name]! I help busy professionals reclaim 10+ hours a week by streamlining their backend processes. With a background in [Your Background], I focus on reliability and proactive communication.
-            </p>
-            <div class="tech-stack">
-                <span class="tag">Google Workspace</span>
-                <span class="tag">Slack</span>
-                <span class="tag">Asana/Trello</span>
-                <span class="tag">Canva</span>
-                <span class="tag">Mailchimp</span>
-            </div>
-        </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="relative min-h-screen gradient-blob flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+     <div class="space-y-8">
+      <div class="space-y-4">
+       <p class="text-amber-700 font-medium tracking-wide text-sm uppercase animate-fade-in">Virtual Assistant</p>
+       <h1 id="hero-name" class="font-display text-5xl md:text-6xl lg:text-7xl text-stone-800 leading-tight animate-fade-in animate-delay-1">Mary Elena Cang</h1>
+       <p id="hero-tagline" class="text-2xl md:text-3xl text-stone-600 font-light animate-fade-in animate-delay-2">Your Virtual Assistant Partner</p>
+      </div>
+      <p id="hero-description" class="text-lg text-stone-500 leading-relaxed max-w-lg animate-fade-in animate-delay-3">Helping entrepreneurs and small business owners reclaim their time by handling administrative tasks, email management, and project coordination with precision and care.</p>
+      <div class="flex flex-wrap gap-4 animate-fade-in animate-delay-4"><a href="#contact" class="px-8 py-4 bg-stone-800 text-white rounded-full font-medium hover:bg-stone-700 transition-all hover:shadow-lg"> Book a Free Consultation </a> <a href="#services" class="px-8 py-4 border-2 border-stone-300 text-stone-700 rounded-full font-medium hover:border-stone-400 hover:bg-stone-100 transition-all"> View Services </a>
+      </div>
+     </div>
+     <div class="relative flex justify-center lg:justify-end">
+      <div class="relative float-animation"><!-- Decorative elements -->
+       <div class="absolute -top-4 -left-4 w-72 h-72 bg-amber-200/30 rounded-full blur-3xl"></div>
+       <div class="absolute -bottom-4 -right-4 w-64 h-64 bg-violet-200/30 rounded-full blur-3xl"></div><!-- Avatar placeholder -->
+       <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-amber-100 to-violet-100 flex items-center justify-center shadow-2xl border-8 border-white">
+        <svg class="w-48 h-48 text-stone-400" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+        </svg>
+       </div><!-- Floating badges -->
+       <div class="absolute top-8 -left-8 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"><span class="text-2xl">✨</span> <span class="text-sm font-medium text-stone-700">5+ Years Experience</span>
+       </div>
+       <div class="absolute bottom-16 -right-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"><span class="text-2xl">💼</span> <span class="text-sm font-medium text-stone-700">100+ Happy Clients</span>
+       </div>
+      </div>
+     </div>
     </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="space-y-6">
+       <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">Get to Know Me</p>
+       <h2 id="about-heading" class="font-display text-4xl md:text-5xl text-stone-800">About Me</h2>
+       <p id="about-text" class="text-lg text-stone-500 leading-relaxed">With over 5 years of experience supporting busy professionals, I specialize in creating seamless workflows that save you hours every week. I'm passionate about organization, clear communication, and helping businesses grow by taking care of the details that matter.</p>
+       <div class="grid grid-cols-2 gap-6 pt-4">
+        <div class="space-y-1">
+         <p class="text-3xl font-display font-semibold text-stone-800">500+</p>
+         <p class="text-stone-500 text-sm">Projects Completed</p>
+        </div>
+        <div class="space-y-1">
+         <p class="text-3xl font-display font-semibold text-stone-800">98%</p>
+         <p class="text-stone-500 text-sm">Client Satisfaction</p>
+        </div>
+        <div class="space-y-1">
+         <p class="text-3xl font-display font-semibold text-stone-800">24hr</p>
+         <p class="text-stone-500 text-sm">Response Time</p>
+        </div>
+        <div class="space-y-1">
+         <p class="text-3xl font-display font-semibold text-stone-800">15+</p>
+         <p class="text-stone-500 text-sm">Industries Served</p>
+        </div>
+       </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+       <div class="space-y-4">
+        <div class="bg-amber-50 rounded-2xl p-6 h-48 flex flex-col justify-between"><span class="text-4xl">📧</span>
+         <div>
+          <p class="font-semibold text-stone-800">Email Expert</p>
+          <p class="text-sm text-stone-500">Inbox Zero Champion</p>
+         </div>
+        </div>
+        <div class="bg-violet-50 rounded-2xl p-6 h-56 flex flex-col justify-between"><span class="text-4xl">📅</span>
+         <div>
+          <p class="font-semibold text-stone-800">Calendar Wizard</p>
+          <p class="text-sm text-stone-500">Scheduling Perfection</p>
+         </div>
+        </div>
+       </div>
+       <div class="space-y-4 pt-8">
+        <div class="bg-rose-50 rounded-2xl p-6 h-56 flex flex-col justify-between"><span class="text-4xl">📊</span>
+         <div>
+          <p class="font-semibold text-stone-800">Data Organizer</p>
+          <p class="text-sm text-stone-500">Systems &amp; Processes</p>
+         </div>
+        </div>
+        <div class="bg-emerald-50 rounded-2xl p-6 h-48 flex flex-col justify-between"><span class="text-4xl">🎯</span>
+         <div>
+          <p class="font-semibold text-stone-800">Project Pro</p>
+          <p class="text-sm text-stone-500">On Time, Every Time</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="py-24 bg-stone-100">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="text-center mb-16 space-y-4">
+      <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">What I Do</p>
+      <h2 id="services-heading" class="font-display text-4xl md:text-5xl text-stone-800">Services I Offer</h2>
+      <p class="text-stone-500 max-w-2xl mx-auto">Comprehensive virtual assistance tailored to your unique business needs</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Service 1 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Email Management</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Organize your inbox, respond to inquiries, filter spam, and ensure important messages never slip through the cracks.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Inbox organization</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Response drafting</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Priority filtering</li>
+       </ul>
+      </div><!-- Service 2 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-violet-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-violet-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Calendar Management</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Keep your schedule optimized with seamless appointment booking, reminders, and time zone coordination.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Appointment scheduling</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Meeting coordination</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Reminder systems</li>
+       </ul>
+      </div><!-- Service 3 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Project Coordination</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Keep projects on track with task management, deadline monitoring, and team communication support.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Task tracking</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Progress reports</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Team coordination</li>
+       </ul>
+      </div><!-- Service 4 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Research &amp; Data Entry</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Thorough research, data collection, and organized documentation to support your business decisions.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Market research</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Data organization</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Report creation</li>
+       </ul>
+      </div><!-- Service 5 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Social Media Support</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Content scheduling, community engagement, and analytics tracking to grow your online presence.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Post scheduling</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Engagement management</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Analytics reports</li>
+       </ul>
+      </div><!-- Service 6 -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+       <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        </svg>
+       </div>
+       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Bookkeeping Support</h3>
+       <p class="text-stone-500 text-sm leading-relaxed mb-4">Basic bookkeeping, invoice management, and expense tracking to keep your finances organized.</p>
+       <ul class="space-y-2">
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Invoice processing</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Expense tracking</li>
+        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Financial reports</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section id="testimonials" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="text-center mb-16 space-y-4">
+      <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">Client Love</p>
+      <h2 class="font-display text-4xl md:text-5xl text-stone-800">What Clients Say</h2>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 relative">
+       <div class="absolute top-6 right-6 text-5xl text-amber-200">
+        "
+       </div>
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       </div>
+       <p class="text-stone-600 mb-6 relative z-10">"Sarah transformed my chaotic inbox into an organized system. I now have 10+ extra hours per week to focus on growing my business!"</p>
+       <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center text-xl">
+         👩‍💼
+        </div>
+        <div>
+         <p class="font-semibold text-stone-800">Jennifer M.</p>
+         <p class="text-sm text-stone-500">Marketing Consultant</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 2 -->
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-8 relative">
+       <div class="absolute top-6 right-6 text-5xl text-violet-200">
+        "
+       </div>
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       </div>
+       <p class="text-stone-600 mb-6 relative z-10">"Professional, reliable, and incredibly detail-oriented. Sarah handles everything with such care that I never have to worry about deadlines."</p>
+       <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center text-xl">
+         👨‍💻
+        </div>
+        <div>
+         <p class="font-semibold text-stone-800">David K.</p>
+         <p class="text-sm text-stone-500">Tech Startup Founder</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 3 -->
+      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 relative">
+       <div class="absolute top-6 right-6 text-5xl text-emerald-200">
+        "
+       </div>
+       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       </div>
+       <p class="text-stone-600 mb-6 relative z-10">"Best decision I made for my business. Sarah's project management skills are exceptional. She keeps everything running smoothly!"</p>
+       <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center text-xl">
+         👩‍🎨
+        </div>
+        <div>
+         <p class="font-semibold text-stone-800">Lisa R.</p>
+         <p class="text-sm text-stone-500">Creative Director</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-24 bg-stone-800">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+     <p class="text-amber-400 font-medium tracking-wide text-sm uppercase mb-4">Ready to Start?</p>
+     <h2 id="contact-heading" class="font-display text-4xl md:text-5xl text-white mb-6">Let's Work Together</h2>
+     <p id="contact-text" class="text-stone-400 text-lg mb-10 max-w-2xl mx-auto">Ready to streamline your business and reclaim your time? Let's chat about how I can support your goals.</p>
+     <form id="contact-form" class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-left space-y-6">
+      <div class="grid md:grid-cols-2 gap-6">
+       <div><label for="name" class="block text-sm font-medium text-stone-700 mb-2">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none" placeholder="Jane Smith">
+       </div>
+       <div><label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none" placeholder="jane@example.com">
+       </div>
+      </div>
+      <div><label for="service" class="block text-sm font-medium text-stone-700 mb-2">Service Interested In</label> <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none bg-white"> <option value="">Select a service</option> <option value="email">Email Management</option> <option value="calendar">Calendar Management</option> <option value="project">Project Coordination</option> <option value="research">Research &amp; Data Entry</option> <option value="social">Social Media Support</option> <option value="bookkeeping">Bookkeeping Support</option> <option value="other">Other / Multiple Services</option> </select>
+      </div>
+      <div><label for="message" class="block text-sm font-medium text-stone-700 mb-2">Your Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none resize-none" placeholder="Tell me about your needs..."></textarea>
+      </div><button type="submit" class="w-full py-4 bg-stone-800 text-white rounded-xl font-medium hover:bg-stone-700 transition-all hover:shadow-lg flex items-center justify-center gap-2"> <span>Send Message</span>
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+       </svg></button>
+      <p id="form-success" class="hidden text-center text-emerald-600 font-medium py-2">✓ Message sent! I'll get back to you within 24 hours.</p>
+     </form>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-stone-900 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-center md:text-left">
+       <p id="footer-name" class="font-display text-xl text-white mb-2">Mary Elena Cang</p>
+       <p class="text-stone-500 text-sm">Virtual Assistant • Supporting Your Success</p>
+      </div>
+      <div class="flex items-center gap-6"><a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg></a> <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M22.46 6c-.85.38-1.78.64-2.75.76 1-.6 1.76-1.55 2.12-2.68-.93.55-1.96.95-3.06 1.17-.88-.94-2.13-1.53-3.51-1.53-2.66 0-4.81 2.16-4.81 4.81 0 .38.04.75.13 1.1-4-.2-7.58-2.11-9.96-5.02-.42.72-.66 1.56-.66 2.46 0 1.68.85 3.16 2.14 4.02-.79-.02-1.53-.24-2.18-.6v.06c0 2.35 1.67 4.31 3.88 4.76-.4.1-.83.16-1.27.16-.31 0-.62-.03-.92-.08.63 1.96 2.45 3.39 4.61 3.43-1.69 1.32-3.83 2.1-6.15 2.1-.4 0-.8-.02-1.19-.07 2.19 1.4 4.78 2.22 7.57 2.22 9.07 0 14.02-7.52 14.02-14.02 0-.21 0-.43-.01-.64.96-.69 1.79-1.56 2.45-2.55z" />
+        </svg></a> <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg></a>
+      </div>
+     </div>
+     <div class="border-t border-stone-800 mt-8 pt-8 text-center">
+      <p class="text-stone-500 text-sm">© 2024 Mary Elena Cang. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_name: 'Mary Elena Cang',
+      hero_tagline: 'Your Virtual Assistant Partner',
+      hero_description: 'Helping entrepreneurs and small business owners reclaim their time by handling administrative tasks, email management, and project coordination with precision and care.',
+      about_heading: 'About Me',
+      about_text: 'With over 5 years of experience supporting busy professionals, I specialize in creating seamless workflows that save you hours every week. I\'m passionate about organization, clear communication, and helping businesses grow by taking care of the details that matter.',
+      services_heading: 'Services I Offer',
+      contact_heading: 'Let\'s Work Together',
+      contact_text: 'Ready to streamline your business and reclaim your time? Let\'s chat about how I can support your goals.',
+      background_color: '#fafaf9',
+      surface_color: '#ffffff',
+      text_color: '#292524',
+      primary_action_color: '#292524',
+      accent_color: '#b45309',
+      font_family: 'Playfair Display',
+      font_size: 16
+    };
 
-    <footer id="contact">
-        <p>Ready to get started?</p>
-        <p><strong>your.email@example.com</strong></p>
-        <br>
-        <p>&copy; 2026 [Your Name]. All Rights Reserved.</p>
-    </footer>
+    let config = { ...defaultConfig };
 
-</body>
+    async function onConfigChange(newConfig) {
+      config = { ...config, ...newConfig };
+      
+      // Update hero section
+      document.getElementById('hero-name').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('hero-tagline').textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      document.getElementById('hero-description').textContent = config.hero_description || defaultConfig.hero_description;
+      
+      // Update about section
+      document.getElementById('about-heading').textContent = config.about_heading || defaultConfig.about_heading;
+      document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+      
+      // Update services section
+      document.getElementById('services-heading').textContent = config.services_heading || defaultConfig.services_heading;
+      
+      // Update contact section
+      document.getElementById('contact-heading').textContent = config.contact_heading || defaultConfig.contact_heading;
+      document.getElementById('contact-text').textContent = config.contact_text || defaultConfig.contact_text;
+      
+      // Update nav and footer name
+      document.getElementById('nav-name').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('footer-name').textContent = config.hero_name || defaultConfig.hero_name;
+
+      // Apply colors
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const accentColor = config.accent_color || defaultConfig.accent_color;
+
+      document.documentElement.style.setProperty('--bg-color', bgColor);
+      document.documentElement.style.setProperty('--surface-color', surfaceColor);
+      document.documentElement.style.setProperty('--text-color', textColor);
+      document.documentElement.style.setProperty('--primary-action-color', primaryActionColor);
+      document.documentElement.style.setProperty('--accent-color', accentColor);
+
+      // Apply font
+      const fontFamily = config.font_family || defaultConfig.font_family;
+      const fontSize = config.font_size || defaultConfig.font_size;
+      
+      document.querySelectorAll('.font-display').forEach(el => {
+        el.style.fontFamily = `${fontFamily}, Playfair Display, serif`;
+      });
+      
+      document.body.style.fontSize = `${fontSize}px`;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ surface_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_action_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['hero_name', config.hero_name || defaultConfig.hero_name],
+        ['hero_tagline', config.hero_tagline || defaultConfig.hero_tagline],
+        ['hero_description', config.hero_description || defaultConfig.hero_description],
+        ['about_heading', config.about_heading || defaultConfig.about_heading],
+        ['about_text', config.about_text || defaultConfig.about_text],
+        ['services_heading', config.services_heading || defaultConfig.services_heading],
+        ['contact_heading', config.contact_heading || defaultConfig.contact_heading],
+        ['contact_text', config.contact_text || defaultConfig.contact_text]
+      ]);
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Form submission handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = this;
+      const button = form.querySelector('button[type="submit"]');
+      const successMsg = document.getElementById('form-success');
+      
+      // Show loading state
+      button.disabled = true;
+      button.innerHTML = '<span>Sending...</span>';
+      
+      // Simulate form submission
+      setTimeout(() => {
+        form.reset();
+        successMsg.classList.remove('hidden');
+        button.disabled = false;
+        button.innerHTML = '<span>Send Message</span><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+        
+        setTimeout(() => {
+          successMsg.classList.add('hidden');
+        }, 5000);
+      }, 1500);
+    });
+
+    // Initial render
+    onConfigChange(config);
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1cd3ad638c1fc4',t:'MTc2OTA2MTU4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
