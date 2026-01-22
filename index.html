@@ -19,10 +19,6 @@
     .font-body {
       font-family: 'DM Sans', sans-serif;
     }
-    .gradient-blob {
-      background: radial-gradient(ellipse at 30% 20%, rgba(255, 200, 170, 0.4) 0%, transparent 50%),
-                  radial-gradient(ellipse at 70% 80%, rgba(200, 180, 255, 0.3) 0%, transparent 50%);
-    }
     .service-card:hover {
       transform: translateY(-4px);
     }
@@ -71,42 +67,42 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full font-body">
-  <div id="app" class="w-full h-full overflow-auto bg-stone-50"><!-- Navigation -->
-   <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200/50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#home" id="nav-name" class="font-display text-xl font-semibold text-stone-800">Mary Elena Cang</a>
-     <div class="hidden md:flex items-center gap-8"><a href="#about" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">About</a> <a href="#services" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Services</a> <a href="#testimonials" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-stone-800 text-white rounded-full text-sm font-medium hover:bg-stone-700 transition-colors">Get in Touch</a>
-     </div><button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600">
+  <div id="app" class="w-full h-full overflow-auto bg-white"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-blue-600 shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#home" id="nav-name" class="font-display text-xl font-black text-blue-900">Mary Elena Cang</a>
+     <div class="hidden md:flex items-center gap-8"><a href="#about" class="nav-link text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">About</a> <a href="#services" class="nav-link text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">Services</a> <a href="#testimonials" class="nav-link text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-lg">Get in Touch</a>
+     </div><button id="mobile-menu-btn" class="md:hidden p-2 text-blue-700">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg></button>
     </div><!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200/50 px-6 py-4">
-     <div class="flex flex-col gap-4"><a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">About</a> <a href="#services" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Services</a> <a href="#testimonials" class="text-stone-600 hover:text-stone-900 transition-colors text-sm font-medium">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-stone-800 text-white rounded-full text-sm font-medium hover:bg-stone-700 transition-colors text-center">Get in Touch</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t-2 border-blue-200 px-6 py-4">
+     <div class="flex flex-col gap-4"><a href="#about" class="text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">About</a> <a href="#services" class="text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">Services</a> <a href="#testimonials" class="text-blue-700 hover:text-blue-900 transition-colors text-sm font-bold">Testimonials</a> <a href="#contact" class="px-5 py-2.5 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 transition-all text-center shadow-lg">Get in Touch</a>
      </div>
     </div>
    </nav><!-- Hero Section -->
-   <section id="home" class="relative min-h-screen gradient-blob flex items-center pt-20">
+   <section id="home" class="relative min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center pt-20">
     <div class="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
      <div class="space-y-8">
       <div class="space-y-4">
-       <p class="text-amber-700 font-medium tracking-wide text-sm uppercase animate-fade-in">Virtual Assistant</p>
-       <h1 id="hero-name" class="font-display text-5xl md:text-6xl lg:text-7xl text-stone-800 leading-tight animate-fade-in animate-delay-1">Mary Elena Cang</h1>
-       <p id="hero-tagline" class="text-2xl md:text-3xl text-stone-600 font-light animate-fade-in animate-delay-2">Your Virtual Assistant Partner</p>
+       <p class="text-blue-600 font-black tracking-wide text-sm uppercase animate-fade-in bg-blue-100 inline-block px-4 py-2 rounded-full">Virtual Assistant</p>
+       <h1 id="hero-name" class="font-display text-5xl md:text-6xl lg:text-7xl text-blue-900 leading-tight animate-fade-in animate-delay-1 font-black">Mary Elena Cang</h1>
+       <p id="hero-tagline" class="text-2xl md:text-3xl text-blue-700 font-bold animate-fade-in animate-delay-2">Your Virtual Assistant Partner</p>
       </div>
-      <p id="hero-description" class="text-lg text-stone-500 leading-relaxed max-w-lg animate-fade-in animate-delay-3">Helping entrepreneurs and small business owners reclaim their time by handling administrative tasks, email management, and project coordination with precision and care.</p>
-      <div class="flex flex-wrap gap-4 animate-fade-in animate-delay-4"><a href="#contact" class="px-8 py-4 bg-stone-800 text-white rounded-full font-medium hover:bg-stone-700 transition-all hover:shadow-lg"> Book a Free Consultation </a> <a href="#services" class="px-8 py-4 border-2 border-stone-300 text-stone-700 rounded-full font-medium hover:border-stone-400 hover:bg-stone-100 transition-all"> View Services </a>
+      <p id="hero-description" class="text-lg text-blue-600 leading-relaxed max-w-lg animate-fade-in animate-delay-3 font-semibold">Helping entrepreneurs and small business owners reclaim their time by handling administrative tasks, email management, and project coordination with precision and care.</p>
+      <div class="flex flex-wrap gap-4 animate-fade-in animate-delay-4"><a href="#contact" class="px-8 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all hover:shadow-2xl transform hover:scale-105"> Book a Free Consultation </a> <a href="#services" class="px-8 py-4 border-4 border-blue-600 text-blue-700 rounded-full font-bold hover:bg-blue-50 transition-all"> View Services </a>
       </div>
      </div>
      <div class="relative flex justify-center lg:justify-end">
       <div class="relative float-animation"><!-- Decorative elements -->
-       <div class="absolute -top-4 -left-4 w-72 h-72 bg-amber-200/30 rounded-full blur-3xl"></div>
-       <div class="absolute -bottom-4 -right-4 w-64 h-64 bg-violet-200/30 rounded-full blur-3xl"></div><!-- Avatar placeholder -->
-       <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-amber-100 to-violet-100 flex items-center justify-center shadow-2xl border-8 border-white">
-        <svg class="w-48 h-48 text-stone-400" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+       <div class="absolute -top-4 -left-4 w-72 h-72 bg-blue-200/40 rounded-full blur-3xl"></div>
+       <div class="absolute -bottom-4 -right-4 w-64 h-64 bg-blue-300/40 rounded-full blur-3xl"></div><!-- Avatar placeholder -->
+       <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-2xl border-8 border-white">
+        <svg class="w-48 h-48 text-blue-400" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
         </svg>
        </div><!-- Floating badges -->
-       <div class="absolute top-8 -left-8 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"><span class="text-2xl">✨</span> <span class="text-sm font-medium text-stone-700">5+ Years Experience</span>
+       <div class="absolute top-8 -left-8 bg-white px-4 py-2 rounded-full shadow-xl flex items-center gap-2 border-2 border-blue-200"><span class="text-2xl">✨</span> <span class="text-sm font-bold text-blue-900">5+ Years Experience</span>
        </div>
-       <div class="absolute bottom-16 -right-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2"><span class="text-2xl">💼</span> <span class="text-sm font-medium text-stone-700">100+ Happy Clients</span>
+       <div class="absolute bottom-16 -right-4 bg-white px-4 py-2 rounded-full shadow-xl flex items-center gap-2 border-2 border-blue-200"><span class="text-2xl">💼</span> <span class="text-sm font-bold text-blue-900">100+ Happy Clients</span>
        </div>
       </div>
      </div>
@@ -116,54 +112,54 @@
     <div class="max-w-6xl mx-auto px-6">
      <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="space-y-6">
-       <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">Get to Know Me</p>
-       <h2 id="about-heading" class="font-display text-4xl md:text-5xl text-stone-800">About Me</h2>
-       <p id="about-text" class="text-lg text-stone-500 leading-relaxed">With over 5 years of experience supporting busy professionals, I specialize in creating seamless workflows that save you hours every week. I'm passionate about organization, clear communication, and helping businesses grow by taking care of the details that matter.</p>
+       <p class="text-blue-600 font-black tracking-wide text-sm uppercase bg-blue-100 inline-block px-4 py-2 rounded-full">Get to Know Me</p>
+       <h2 id="about-heading" class="font-display text-4xl md:text-5xl text-blue-900 font-black">About Me</h2>
+       <p id="about-text" class="text-lg text-blue-700 leading-relaxed font-semibold">With over 5 years of experience supporting busy professionals, I specialize in creating seamless workflows that save you hours every week. I'm passionate about organization, clear communication, and helping businesses grow by taking care of the details that matter.</p>
        <div class="grid grid-cols-2 gap-6 pt-4">
-        <div class="space-y-1">
-         <p class="text-3xl font-display font-semibold text-stone-800">500+</p>
-         <p class="text-stone-500 text-sm">Projects Completed</p>
+        <div class="space-y-1 bg-blue-50 p-4 rounded-xl border-2 border-blue-200">
+         <p class="text-3xl font-display font-black text-blue-900">500+</p>
+         <p class="text-blue-700 text-sm font-bold">Projects Completed</p>
         </div>
-        <div class="space-y-1">
-         <p class="text-3xl font-display font-semibold text-stone-800">98%</p>
-         <p class="text-stone-500 text-sm">Client Satisfaction</p>
+        <div class="space-y-1 bg-blue-50 p-4 rounded-xl border-2 border-blue-200">
+         <p class="text-3xl font-display font-black text-blue-900">98%</p>
+         <p class="text-blue-700 text-sm font-bold">Client Satisfaction</p>
         </div>
-        <div class="space-y-1">
-         <p class="text-3xl font-display font-semibold text-stone-800">24hr</p>
-         <p class="text-stone-500 text-sm">Response Time</p>
+        <div class="space-y-1 bg-blue-50 p-4 rounded-xl border-2 border-blue-200">
+         <p class="text-3xl font-display font-black text-blue-900">24hr</p>
+         <p class="text-blue-700 text-sm font-bold">Response Time</p>
         </div>
-        <div class="space-y-1">
-         <p class="text-3xl font-display font-semibold text-stone-800">15+</p>
-         <p class="text-stone-500 text-sm">Industries Served</p>
+        <div class="space-y-1 bg-blue-50 p-4 rounded-xl border-2 border-blue-200">
+         <p class="text-3xl font-display font-black text-blue-900">15+</p>
+         <p class="text-blue-700 text-sm font-bold">Industries Served</p>
         </div>
        </div>
       </div>
       <div class="grid grid-cols-2 gap-4">
        <div class="space-y-4">
-        <div class="bg-amber-50 rounded-2xl p-6 h-48 flex flex-col justify-between"><span class="text-4xl">📧</span>
+        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-6 h-48 flex flex-col justify-between border-4 border-white shadow-xl hover:shadow-2xl transition-shadow"><span class="text-4xl">📧</span>
          <div>
-          <p class="font-semibold text-stone-800">Email Expert</p>
-          <p class="text-sm text-stone-500">Inbox Zero Champion</p>
+          <p class="font-black text-blue-900">Email Expert</p>
+          <p class="text-sm text-blue-700 font-bold">Inbox Zero Champion</p>
          </div>
         </div>
-        <div class="bg-violet-50 rounded-2xl p-6 h-56 flex flex-col justify-between"><span class="text-4xl">📅</span>
+        <div class="bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl p-6 h-56 flex flex-col justify-between border-4 border-white shadow-xl hover:shadow-2xl transition-shadow"><span class="text-4xl">📅</span>
          <div>
-          <p class="font-semibold text-stone-800">Calendar Wizard</p>
-          <p class="text-sm text-stone-500">Scheduling Perfection</p>
+          <p class="font-black text-blue-900">Calendar Wizard</p>
+          <p class="text-sm text-blue-700 font-bold">Scheduling Perfection</p>
          </div>
         </div>
        </div>
        <div class="space-y-4 pt-8">
-        <div class="bg-rose-50 rounded-2xl p-6 h-56 flex flex-col justify-between"><span class="text-4xl">📊</span>
+        <div class="bg-gradient-to-br from-blue-300 to-blue-400 rounded-2xl p-6 h-56 flex flex-col justify-between border-4 border-white shadow-xl hover:shadow-2xl transition-shadow"><span class="text-4xl">📊</span>
          <div>
-          <p class="font-semibold text-stone-800">Data Organizer</p>
-          <p class="text-sm text-stone-500">Systems &amp; Processes</p>
+          <p class="font-black text-blue-900">Data Organizer</p>
+          <p class="text-sm text-blue-800 font-bold">Systems &amp; Processes</p>
          </div>
         </div>
-        <div class="bg-emerald-50 rounded-2xl p-6 h-48 flex flex-col justify-between"><span class="text-4xl">🎯</span>
+        <div class="bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl p-6 h-48 flex flex-col justify-between border-4 border-white shadow-xl hover:shadow-2xl transition-shadow"><span class="text-4xl">🎯</span>
          <div>
-          <p class="font-semibold text-stone-800">Project Pro</p>
-          <p class="text-sm text-stone-500">On Time, Every Time</p>
+          <p class="font-black text-white">Project Pro</p>
+          <p class="text-sm text-blue-100 font-bold">On Time, Every Time</p>
          </div>
         </div>
        </div>
@@ -171,90 +167,90 @@
      </div>
     </div>
    </section><!-- Services Section -->
-   <section id="services" class="py-24 bg-stone-100">
+   <section id="services" class="py-24 bg-blue-50">
     <div class="max-w-6xl mx-auto px-6">
      <div class="text-center mb-16 space-y-4">
-      <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">What I Do</p>
-      <h2 id="services-heading" class="font-display text-4xl md:text-5xl text-stone-800">Services I Offer</h2>
-      <p class="text-stone-500 max-w-2xl mx-auto">Comprehensive virtual assistance tailored to your unique business needs</p>
+      <p class="text-blue-600 font-black tracking-wide text-sm uppercase bg-blue-200 inline-block px-4 py-2 rounded-full">What I Do</p>
+      <h2 id="services-heading" class="font-display text-4xl md:text-5xl text-blue-900 font-black">Services I Offer</h2>
+      <p class="text-blue-700 max-w-2xl mx-auto font-bold">Comprehensive virtual assistance tailored to your unique business needs</p>
      </div>
      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Service 1 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Email Management</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Organize your inbox, respond to inquiries, filter spam, and ensure important messages never slip through the cracks.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Email Management</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Organize your inbox, respond to inquiries, filter spam, and ensure important messages never slip through the cracks.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Inbox organization</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Response drafting</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Priority filtering</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Inbox organization</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Response drafting</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Priority filtering</li>
        </ul>
       </div><!-- Service 2 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-violet-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-violet-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Calendar Management</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Keep your schedule optimized with seamless appointment booking, reminders, and time zone coordination.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Calendar Management</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Keep your schedule optimized with seamless appointment booking, reminders, and time zone coordination.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Appointment scheduling</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Meeting coordination</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Reminder systems</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Appointment scheduling</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Meeting coordination</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Reminder systems</li>
        </ul>
       </div><!-- Service 3 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Project Coordination</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Keep projects on track with task management, deadline monitoring, and team communication support.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Project Coordination</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Keep projects on track with task management, deadline monitoring, and team communication support.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Task tracking</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Progress reports</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Team coordination</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Task tracking</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Progress reports</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Team coordination</li>
        </ul>
       </div><!-- Service 4 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Research &amp; Data Entry</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Thorough research, data collection, and organized documentation to support your business decisions.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Research &amp; Data Entry</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Thorough research, data collection, and organized documentation to support your business decisions.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Market research</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Data organization</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Report creation</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Market research</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Data organization</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Report creation</li>
        </ul>
       </div><!-- Service 5 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Social Media Support</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Content scheduling, community engagement, and analytics tracking to grow your online presence.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Social Media Support</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Content scheduling, community engagement, and analytics tracking to grow your online presence.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Post scheduling</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Engagement management</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Analytics reports</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Post scheduling</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Engagement management</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Analytics reports</li>
        </ul>
       </div><!-- Service 6 -->
-      <div class="service-card bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
-       <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-        <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-4 border-blue-200 hover:border-blue-400">
+       <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
         </svg>
        </div>
-       <h3 class="font-display text-xl font-semibold text-stone-800 mb-3">Bookkeeping Support</h3>
-       <p class="text-stone-500 text-sm leading-relaxed mb-4">Basic bookkeeping, invoice management, and expense tracking to keep your finances organized.</p>
+       <h3 class="font-display text-xl font-black text-blue-900 mb-3">Bookkeeping Support</h3>
+       <p class="text-blue-700 text-sm leading-relaxed mb-4 font-semibold">Basic bookkeeping, invoice management, and expense tracking to keep your finances organized.</p>
        <ul class="space-y-2">
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Invoice processing</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Expense tracking</li>
-        <li class="flex items-center gap-2 text-sm text-stone-600"><span class="text-emerald-500">✓</span> Financial reports</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Invoice processing</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Expense tracking</li>
+        <li class="flex items-center gap-2 text-sm text-blue-700 font-bold"><span class="text-blue-600">✓</span> Financial reports</li>
        </ul>
       </div>
      </div>
@@ -263,107 +259,107 @@
    <section id="testimonials" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
      <div class="text-center mb-16 space-y-4">
-      <p class="text-amber-700 font-medium tracking-wide text-sm uppercase">Client Love</p>
-      <h2 class="font-display text-4xl md:text-5xl text-stone-800">What Clients Say</h2>
+      <p class="text-blue-600 font-black tracking-wide text-sm uppercase bg-blue-100 inline-block px-4 py-2 rounded-full">Client Love</p>
+      <h2 class="font-display text-4xl md:text-5xl text-blue-900 font-black">What Clients Say</h2>
      </div>
      <div class="grid md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
-      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 relative">
-       <div class="absolute top-6 right-6 text-5xl text-amber-200">
+      <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 relative border-4 border-white shadow-xl hover:shadow-2xl transition-shadow">
+       <div class="absolute top-6 right-6 text-5xl text-blue-300">
         "
        </div>
-       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">����</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       <div class="flex items-center gap-1 mb-4"><span class="text-blue-600">★</span> <span class="text-blue-600">★</span> <span class="text-blue-600">★</span> <span class="text-blue-600">★</span> <span class="text-blue-600">★</span>
        </div>
-       <p class="text-stone-600 mb-6 relative z-10">"Sarah transformed my chaotic inbox into an organized system. I now have 10+ extra hours per week to focus on growing my business!"</p>
+       <p class="text-blue-900 mb-6 relative z-10 font-semibold">"Sarah transformed my chaotic inbox into an organized system. I now have 10+ extra hours per week to focus on growing my business!"</p>
        <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center text-xl">
+        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl border-2 border-white">
          👩‍💼
         </div>
         <div>
-         <p class="font-semibold text-stone-800">Jennifer M.</p>
-         <p class="text-sm text-stone-500">Marketing Consultant</p>
+         <p class="font-black text-blue-900">Jennifer M.</p>
+         <p class="text-sm text-blue-700 font-bold">Marketing Consultant</p>
         </div>
        </div>
       </div><!-- Testimonial 2 -->
-      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl p-8 relative">
-       <div class="absolute top-6 right-6 text-5xl text-violet-200">
+      <div class="bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl p-8 relative border-4 border-white shadow-xl hover:shadow-2xl transition-shadow">
+       <div class="absolute top-6 right-6 text-5xl text-blue-400">
         "
        </div>
-       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       <div class="flex items-center gap-1 mb-4"><span class="text-blue-700">★</span> <span class="text-blue-700">★</span> <span class="text-blue-700">★</span> <span class="text-blue-700">★</span> <span class="text-blue-700">★</span>
        </div>
-       <p class="text-stone-600 mb-6 relative z-10">"Professional, reliable, and incredibly detail-oriented. Sarah handles everything with such care that I never have to worry about deadlines."</p>
+       <p class="text-blue-900 mb-6 relative z-10 font-semibold">"Professional, reliable, and incredibly detail-oriented. Sarah handles everything with such care that I never have to worry about deadlines."</p>
        <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center text-xl">
+        <div class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-xl border-2 border-white">
          👨‍💻
         </div>
         <div>
-         <p class="font-semibold text-stone-800">David K.</p>
-         <p class="text-sm text-stone-500">Tech Startup Founder</p>
+         <p class="font-black text-blue-900">David K.</p>
+         <p class="text-sm text-blue-800 font-bold">Tech Startup Founder</p>
         </div>
        </div>
       </div><!-- Testimonial 3 -->
-      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 relative">
-       <div class="absolute top-6 right-6 text-5xl text-emerald-200">
+      <div class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl p-8 relative border-4 border-white shadow-xl hover:shadow-2xl transition-shadow">
+       <div class="absolute top-6 right-6 text-5xl text-blue-200">
         "
        </div>
-       <div class="flex items-center gap-1 mb-4"><span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span> <span class="text-amber-400">★</span>
+       <div class="flex items-center gap-1 mb-4"><span class="text-white">★</span> <span class="text-white">★</span> <span class="text-white">★</span> <span class="text-white">★</span> <span class="text-white">★</span>
        </div>
-       <p class="text-stone-600 mb-6 relative z-10">"Best decision I made for my business. Sarah's project management skills are exceptional. She keeps everything running smoothly!"</p>
+       <p class="text-white mb-6 relative z-10 font-semibold">"Best decision I made for my business. Sarah's project management skills are exceptional. She keeps everything running smoothly!"</p>
        <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-emerald-200 rounded-full flex items-center justify-center text-xl">
+        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl border-2 border-blue-300">
          👩‍🎨
         </div>
         <div>
-         <p class="font-semibold text-stone-800">Lisa R.</p>
-         <p class="text-sm text-stone-500">Creative Director</p>
+         <p class="font-black text-white">Lisa R.</p>
+         <p class="text-sm text-blue-100 font-bold">Creative Director</p>
         </div>
        </div>
       </div>
      </div>
     </div>
    </section><!-- Contact Section -->
-   <section id="contact" class="py-24 bg-stone-800">
+   <section id="contact" class="py-24 bg-gradient-to-br from-blue-600 to-blue-800">
     <div class="max-w-4xl mx-auto px-6 text-center">
-     <p class="text-amber-400 font-medium tracking-wide text-sm uppercase mb-4">Ready to Start?</p>
-     <h2 id="contact-heading" class="font-display text-4xl md:text-5xl text-white mb-6">Let's Work Together</h2>
-     <p id="contact-text" class="text-stone-400 text-lg mb-10 max-w-2xl mx-auto">Ready to streamline your business and reclaim your time? Let's chat about how I can support your goals.</p>
-     <form id="contact-form" class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-left space-y-6">
+     <p class="text-white font-bold tracking-wide text-sm uppercase mb-4 bg-blue-700 inline-block px-4 py-2 rounded-full">Ready to Start?</p>
+     <h2 id="contact-heading" class="font-display text-4xl md:text-5xl text-white mb-6 font-black drop-shadow-lg">Let's Work Together</h2>
+     <p id="contact-text" class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto font-semibold">Ready to streamline your business and reclaim your time? Let's chat about how I can support your goals.</p>
+     <form id="contact-form" class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl text-left space-y-6 border-4 border-blue-300">
       <div class="grid md:grid-cols-2 gap-6">
-       <div><label for="name" class="block text-sm font-medium text-stone-700 mb-2">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none" placeholder="Jane Smith">
+       <div><label for="name" class="block text-sm font-bold text-blue-900 mb-2">Your Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-semibold" placeholder="Jane Smith">
        </div>
-       <div><label for="email" class="block text-sm font-medium text-stone-700 mb-2">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none" placeholder="jane@example.com">
+       <div><label for="email" class="block text-sm font-bold text-blue-900 mb-2">Email Address</label> <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none font-semibold" placeholder="jane@example.com">
        </div>
       </div>
-      <div><label for="service" class="block text-sm font-medium text-stone-700 mb-2">Service Interested In</label> <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none bg-white"> <option value="">Select a service</option> <option value="email">Email Management</option> <option value="calendar">Calendar Management</option> <option value="project">Project Coordination</option> <option value="research">Research &amp; Data Entry</option> <option value="social">Social Media Support</option> <option value="bookkeeping">Bookkeeping Support</option> <option value="other">Other / Multiple Services</option> </select>
+      <div><label for="service" class="block text-sm font-bold text-blue-900 mb-2">Service Interested In</label> <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none bg-white font-semibold"> <option value="">Select a service</option> <option value="email">Email Management</option> <option value="calendar">Calendar Management</option> <option value="project">Project Coordination</option> <option value="research">Research &amp; Data Entry</option> <option value="social">Social Media Support</option> <option value="bookkeeping">Bookkeeping Support</option> <option value="other">Other / Multiple Services</option> </select>
       </div>
-      <div><label for="message" class="block text-sm font-medium text-stone-700 mb-2">Your Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all outline-none resize-none" placeholder="Tell me about your needs..."></textarea>
-      </div><button type="submit" class="w-full py-4 bg-stone-800 text-white rounded-xl font-medium hover:bg-stone-700 transition-all hover:shadow-lg flex items-center justify-center gap-2"> <span>Send Message</span>
+      <div><label for="message" class="block text-sm font-bold text-blue-900 mb-2">Your Message</label> <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border-2 border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none font-semibold" placeholder="Tell me about your needs..."></textarea>
+      </div><button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-2xl flex items-center justify-center gap-2 transform hover:scale-105"> <span>Send Message</span>
        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
        </svg></button>
-      <p id="form-success" class="hidden text-center text-emerald-600 font-medium py-2">✓ Message sent! I'll get back to you within 24 hours.</p>
+      <p id="form-success" class="hidden text-center text-blue-600 font-bold py-2">✓ Message sent! I'll get back to you within 24 hours.</p>
      </form>
     </div>
    </section><!-- Footer -->
-   <footer class="bg-stone-900 py-12">
+   <footer class="bg-gradient-to-br from-blue-900 to-blue-950 py-12 border-t-4 border-blue-400">
     <div class="max-w-6xl mx-auto px-6">
      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
-       <p id="footer-name" class="font-display text-xl text-white mb-2">Mary Elena Cang</p>
-       <p class="text-stone-500 text-sm">Virtual Assistant • Supporting Your Success</p>
+       <p id="footer-name" class="font-display text-xl text-white mb-2 font-black">Mary Elena Cang</p>
+       <p class="text-blue-300 text-sm font-bold">Virtual Assistant • Supporting Your Success</p>
       </div>
-      <div class="flex items-center gap-6"><a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+      <div class="flex items-center gap-6"><a href="#" class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-blue-900 hover:bg-blue-300 transition-all shadow-xl transform hover:scale-110 border-2 border-white">
         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-        </svg></a> <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+        </svg></a> <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all shadow-xl transform hover:scale-110 border-2 border-blue-400">
         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
          <path d="M22.46 6c-.85.38-1.78.64-2.75.76 1-.6 1.76-1.55 2.12-2.68-.93.55-1.96.95-3.06 1.17-.88-.94-2.13-1.53-3.51-1.53-2.66 0-4.81 2.16-4.81 4.81 0 .38.04.75.13 1.1-4-.2-7.58-2.11-9.96-5.02-.42.72-.66 1.56-.66 2.46 0 1.68.85 3.16 2.14 4.02-.79-.02-1.53-.24-2.18-.6v.06c0 2.35 1.67 4.31 3.88 4.76-.4.1-.83.16-1.27.16-.31 0-.62-.03-.92-.08.63 1.96 2.45 3.39 4.61 3.43-1.69 1.32-3.83 2.1-6.15 2.1-.4 0-.8-.02-1.19-.07 2.19 1.4 4.78 2.22 7.57 2.22 9.07 0 14.02-7.52 14.02-14.02 0-.21 0-.43-.01-.64.96-.69 1.79-1.56 2.45-2.55z" />
-        </svg></a> <a href="#" class="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:bg-stone-700 hover:text-white transition-colors">
+        </svg></a> <a href="#" class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-blue-900 hover:bg-blue-300 transition-all shadow-xl transform hover:scale-110 border-2 border-white">
         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
         </svg></a>
       </div>
      </div>
-     <div class="border-t border-stone-800 mt-8 pt-8 text-center">
-      <p class="text-stone-500 text-sm">© 2024 Mary Elena Cang. All rights reserved.</p>
+     <div class="border-t-2 border-blue-800 mt-8 pt-8 text-center">
+      <p class="text-blue-300 text-sm font-bold">© 2024 Mary Elena Cang. All rights reserved.</p>
      </div>
     </div>
    </footer>
@@ -516,25 +512,6 @@
       });
     }
 
-    // Initialize Data SDK for contact form submissions
-    const dataHandler = {
-      onDataChanged(data) {
-        // This is a write-only form, no need to display submissions in the UI
-        console.log('Form submissions stored:', data.length);
-      }
-    };
-
-    // Initialize Data SDK
-    if (window.dataSdk) {
-      window.dataSdk.init(dataHandler).then(result => {
-        if (result.isOk) {
-          console.log('Contact form ready to save submissions');
-        } else {
-          console.error('Failed to initialize data storage');
-        }
-      });
-    }
-
     // Mobile menu toggle
     document.getElementById('mobile-menu-btn').addEventListener('click', function() {
       const menu = document.getElementById('mobile-menu');
@@ -585,7 +562,7 @@
       );
       
       // Create mailto link - UPDATE THIS EMAIL ADDRESS
-      const mailtoLink = `mailto:iamanthonycang@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
       
       // Open email client
       window.open(mailtoLink, '_blank');
@@ -603,5 +580,5 @@
     // Initial render
     onConfigChange(config);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1d1117e40b064f',t:'MTc2OTA2NDA5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1e6b4f35b08d09',t:'MTc2OTA3ODI3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
